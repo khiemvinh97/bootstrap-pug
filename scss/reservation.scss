@@ -1,0 +1,20 @@
+//reservation
+.reservation {
+  padding: $section_dis;
+  background-color: $color_gray;
+  background-image: url(images/reservation-bg.jpg);
+  @include background_img(center,cover);
+
+    h2 {
+      color: $color_white;
+      @include style_font($font_medium, 700, none);
+    }
+    h4 {
+      color: $color_white;
+      @include style_font($font_item, 600, none);
+  }
+    a{
+      @include button();
+    }
+  
+}

@@ -1,0 +1,24 @@
+@import "scss/variable.scss";
+@import "scss/mixin.scss";
+@import "scss/text.scss";
+@import "scss/header.scss";
+@import "scss/banner.scss";
+@import "scss/welcome.scss";
+@import "scss/food.scss";
+@import "scss/reservation.scss";
+@import "scss/special.scss";
+@import "scss/feedback.scss";
+@import "scss/update.scss";
+@import "scss/book.scss";
+@import "scss/footer.scss";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+

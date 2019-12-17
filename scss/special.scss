@@ -1,0 +1,34 @@
+//special
+.special {
+  padding: $section_dis;
+  background-color: $color_white;
+  h3 {
+    @include style_font($font_medium, 700, italic);
+  }
+  a {
+    @include button();
+  }
+  h1::after {
+    @include line_text;
+  }
+  .special__text {
+    h3 {
+      @include style_font($font_special, 700, none);
+      span {
+        @include style_font($font_special, 700, italic);
+      }
+    }
+    span {
+      @include style_font($font_special, 700, italic);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .--order-item2 {
+      order: 2;
+    }
+    .--order-img2 {
+      order: 1;
+    }
+  }
+}

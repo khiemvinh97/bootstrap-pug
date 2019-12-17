@@ -1,0 +1,30 @@
+h1 {
+  color: $color_white;
+  text-align: center;
+  display: block;
+  @include style_font($font_large, 700, italic);
+  margin: 0 0 8px;
+  &.--black {
+    color: $color_black;
+    text-align: left;
+  }
+}
+h4 {
+  text-align: center;
+  display: block;
+  color: $color_white;
+  margin-bottom: 15px;
+  &.--left {
+    text-align: left;
+  }
+}
+span {
+  color: $color_yellow;
+}
+p {
+  font-size: $font_small;
+  color: $color_gray;
+  &.--white {
+    color: $color_white;
+  }
+}

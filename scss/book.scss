@@ -1,0 +1,26 @@
+
+
+//Booktable
+.book {
+  padding: $section_dis;
+  background-color: $color_gray;
+  background-image: url(images/table-bg.jpg);
+  @include background_img(center,cover);
+  position: relative;
+  z-index: 1;
+  &::after {
+    @include section_shahow();
+  }
+    h3 {
+      @include style_font($font_medium, 700, italic);
+      color: $color_white;
+    }
+    
+
+    .confirm__button{
+      button{
+        @include button();
+        @include center__item();
+      }
+    }
+}

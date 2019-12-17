@@ -1,0 +1,12 @@
+.welcome {
+  padding-top: 100px;
+  span {
+    @include style_font($font_medium, 700, italic);
+  }
+  h3 {
+    @include style_font($font_medium, 700, italic);
+  }
+  a{
+    @include button();
+  }
+}

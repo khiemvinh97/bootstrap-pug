@@ -1,0 +1,7 @@
+.banner {
+  padding: 400px 0 350px;
+  background-color: $color_gray;
+  background-image: url(images/banner-bg.jpg);
+  @include background_img(center,cover);
+
+}

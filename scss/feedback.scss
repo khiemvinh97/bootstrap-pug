@@ -1,0 +1,46 @@
+//feedback
+
+.feedback {
+  padding: $section_dis;
+  background-color: $color_gray;
+  background-image: url(images/testimonial-bg.jpg);
+  @include background_img(center, cover);
+  z-index: 1;
+  &::after {
+    @include section_shahow();
+  }
+  h3 {
+    @include style_font($font_medium, 700, none);
+    color: $color_white;
+  }
+  p {
+    color: $color_white;
+  }
+
+    .feedback__customer {
+      background: $color_white;
+      background-image: url(./images/quote.png);
+      @include background_img(top right,none);
+      @include center__item();
+      .customer__text {
+        h1,
+        h4 {
+          color: $color_black;
+        }
+        h1 {
+          @include style_font($font_item, 700, none);
+        }
+        p {
+          color: $color_gray;
+        }
+      }
+      &:hover {
+        .customer__text {
+          h1 {
+            color: $color_yellow;
+          }
+        }
+      
+    }
+  }
+}

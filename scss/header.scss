@@ -1,0 +1,12 @@
+header {
+  width: 90%;
+  top: 20px;
+  left: 50%;
+  background-color: $color_white;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  a:hover {
+    color :$color_yellow !important;
+  }
+
+}

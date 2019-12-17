@@ -1,0 +1,50 @@
+//food section
+.food {
+  padding: $section_dis;
+  background-image: url(images/food-bg.png);
+  @include background_img(top right,none);
+
+  @media (max-width: 768px) {
+    & {
+      background: none;
+    }
+  }
+    span {
+      @include style_font($font_medium, 700, italic);
+    }
+    h3 {
+      @include style_font($font_medium, 700, italic);
+
+    }   
+    .single__food {
+      max-width: $img_size;
+      @include center__item();
+      
+      .food__content {
+        background: $color_white;
+        max-width: $img_size;
+        h5 {
+          @include style_font($font_item, 700, none);
+
+        }
+        span {
+          @include style_font($font_item, 700, none);
+        }
+      }
+    }
+    .single__food:hover {
+      .food__img img {
+        transform: scale(1.1);
+      }
+      .food__content {
+        background: $color_yellow;
+        span {
+          color: $color_black;
+        }
+        p {
+          color: $color_black;
+        }
+      } 
+  }
+ 
+}

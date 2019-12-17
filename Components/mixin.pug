@@ -1,0 +1,120 @@
+//mixin header
+mixin menu(list)
+  each item in list 
+    a(href="#").nav-item.nav-link.active.px-3.py-2= item
+
+
+
+//mixin food
+mixin fooditem(foods)
+  each food in foods
+    .col-sm-6.col-12.col-lg-4
+      .single__food.mt-5
+        .food__img.overflow-hidden
+          img.img-fluid.img(src=food.img)
+        .food__content.p-5
+          h5= food.name
+          span= food.cost
+          p Face together given moveth divided form Of Seasons that fruitful.
+
+
+
+
+//mixin special
+
+mixin special(items)
+  each item in items
+    .row
+      .col-md-6.col-12.mt-5(class=`--order-item${item.order}`)
+        h1.--black= `0${item.order}.`
+        .special__text.pl-5
+          h3 
+            span.d-block= `${item.span}` 
+            =`${item.name}` 
+          br
+          p Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.
+          br
+          br
+          span.d-block.mb-4   $12.00
+          br
+          a(href="#") BOOK A TABLE
+      .col-md-6.col-12.mt-5(class=`--order-img${item.order}`)
+        img.img.img-fluid(src=item.img)
+      
+
+//feed back mixin
+mixin feedback()
+  -for(var x=1;x<4;x++)
+              case x
+                when 1 
+                  .carousel-item.active
+                   .feedback__customer.rounded.p-5.d-flex.flex-wrap.w-75.text-center
+                    .customer__img.col-12
+                      img.img(src="images/customer1.png")
+                    .customer__text.col-12
+                      h1 Adame Nesane
+                      h4 Chief Customer
+                      p You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.
+                default
+                  .carousel-item
+                    .feedback__customer.rounded.p-5.d-flex.flex-wrap.text-center.w-75
+                      .customer__img.col-12
+                        img.img(src="images/customer2.png")
+                      .customer__text.col-12
+                        h1 Adame Nesane
+                        h4 Chief Customer
+                        p You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.
+
+
+
+//mixin update
+mixin updateitem(foods)
+  each food in foods
+    .col-12.col-md-4.mt-5
+      .single__food
+        .food__img
+          img.img.img-fluid(src=food.img)
+        .food__content.px-5.py-4
+          .post-by.d-flex.justify-content-between.mb-4.flex-md-column.flex-lg-row.flex-sm-row.flex-column
+            span
+              i.fa.fa-user-o.mr-2  Admin
+            span 
+              i.fa.fa-calendar-o.mr-2  10/12/2019
+          h4.--left= food.title
+          p Nancy boy off his nut so I said chimney pot be James Bond aking cakes he.s
+          .read-more
+            a(href="#") Read More  
+              i.fa.fa-long-arrow-right
+
+//mixin for input
+
+mixin input(items)
+  each item in items
+    .col-md-4.mb-3
+      label(for="validationCustom01")
+      .input-group
+        .input-group-prepend
+          span.input-group-text.basic-addon1.bg-white
+            i(class=`${item.icon}`)
+        input(type=item.type  class="form-control" id="validationCustom01"  placeholder=item.place required)
+
+//mixin footer
+mixin contact(items)
+  each item in items
+    li.d-block.pb-2
+      i.d-inline-block.mr-3(class=item.icon)
+      p.d-inline= item.text
+
+mixin open(items)
+  each item in items
+    li.d-block.pb-2
+      div.d-flex.justify-content-between
+        p= item.date
+        p= item.time
+
+
+mixin social(items)
+  each item in items 
+    li.d-inline-block.mr-4
+      a(href="#") 
+        i(class=`${item}`)  
